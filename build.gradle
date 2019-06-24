@@ -1,4 +1,4 @@
-allprojects {
+
     // Apply the java plugin to add support for Java
     apply plugin: 'java'
     apply plugin: 'eclipse'
@@ -12,13 +12,8 @@ allprojects {
         mavenLocal() // Mainly for snapshot Venom builds
         jcenter()
     }
+
     dependencies {
     // In this section you declare the dependencies for your production and test code
         compile 'org.slf4j:slf4j-api:1.7.26'
-        // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
-        testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.26'
-
-        testCompile("junit:junit:4.12")
-        testRuntime("org.junit.vintage:junit-vintage-engine:5.4.0")
     }
-}
