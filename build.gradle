@@ -1,19 +1,25 @@
+plugins {
+        id 'java'
+    }
 
-    // Apply the java plugin to add support for Java
-    apply plugin: 'java'
-    apply plugin: 'eclipse'
-    apply plugin: 'maven-publish'
+    group 'com.ritualsoftheold'
+    version '1.0-SNAPSHOT'
 
     sourceCompatibility = 12
     targetCompatibility = 12
 
-    // In this section you declare where to find the dependencies of your project
     repositories {
-        mavenLocal() // Mainly for snapshot Venom builds
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-    // In this section you declare the dependencies for your production and test code
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        // In this section you declare the dependencies for your production and test code
         compile 'org.slf4j:slf4j-api:1.7.26'
+        compile group: 'org.lwjgl', name: 'lwjgl', version: '3.2.2'
+        compile group: 'org.lwjgl', name: 'lwjgl', version: '3.2.2', classifier: 'natives-windows'
+        compile group: 'org.lwjgl', name: 'lwjgl-opengl', version: '3.2.2'
+        compile group: 'org.lwjgl', name: 'lwjgl-opengl', version: '3.2.2', classifier: 'natives-windows'
+        compile group: 'org.lwjgl', name: 'lwjgl-glfw', version: '3.2.2'
+        compile group: 'org.lwjgl', name: 'lwjgl-glfw', version: '3.2.2', classifier: 'natives-windows'
     }
