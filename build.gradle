@@ -22,4 +22,8 @@ plugins {
         compile group: 'org.lwjgl', name: 'lwjgl-opengl', version: '3.2.2', classifier: 'natives-windows'
         compile group: 'org.lwjgl', name: 'lwjgl-glfw', version: '3.2.2'
         compile group: 'org.lwjgl', name: 'lwjgl-glfw', version: '3.2.2', classifier: 'natives-windows'
+        compile group: 'org.joml', name: 'joml', version: '1.9.15'
+        compile group: 'org.lwjgl', name: 'lwjgl-assimp', version: '3.2.2'
+        compile group: 'org.lwjgl', name: 'lwjgl-assimp', version: '3.2.2', classifier: 'natives-windows'
+
     }
